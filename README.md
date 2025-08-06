@@ -27,6 +27,16 @@ This repository contains the source code for my personal website, which serves a
 
 ---
 
+## Code vs. Content Licensing
+
+It is important to distinguish between the "code" and the "content" of this project.
+
+* **The Code:** All software components of this project (e.g., HTML, CSS, JavaScript, and PHP files) are licensed under the **MIT License** as specified in the `LICENSE` file.
+
+* **The Content:** All personal content, including but not limited to images, photographs, and the text of articles and personal stories, is the exclusive property of Shayan Farhang Pazhooh and is **NOT** licensed under the MIT License. All rights are reserved for this content, and it may not be reused, reproduced, or distributed without explicit permission.
+
+---
+
 ## License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
