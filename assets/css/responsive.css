@@ -1,0 +1,56 @@
+@media (max-width: 1199px) {
+  #websites .shwebeles {
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 1200px) {}
+
+@media (max-width: 991px) {
+  main#main .my-name-is{
+    font-size:26px;
+    margin-top: 20px;
+  }
+  main#main .i-am-who{
+    font-size:14.3px;
+  }
+  #skills .skill-boxes {
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 992px) {}
+
+@media (max-width: 767px) {
+  .sh-btn{
+    margin:20px auto !important
+  }
+  .sh-btn, .herodiv .sh-btn {
+    margin: 15px auto !important;
+    display: block !important
+  }
+  main#main img.left-img {
+    margin: auto;
+    display: block;
+    width: 333px;
+    max-width: 100%;
+  }
+  main#main.home-padding-top{
+    padding-top: 50px;
+  }
+  .shweb-head-btn a.shweb-btn, .toparea .lang-headarea{
+    margin: 10px auto;
+  }
+
+  .herodiv .hero-intro h2{margin-top:20px}
+}
+
+@media (min-width: 768px) {}
+
+@media (max-width: 575px) {
+  #contact .shayanfp-contact-box{
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 576px) {}

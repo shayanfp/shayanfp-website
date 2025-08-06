@@ -1,0 +1,46 @@
+<!Doctype html>
+
+<html lang="fa">
+
+<head>
+  <title>دسترسی نامعتبر</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://shayanweb.com/wp-content/themes/shayanweb/css/bootstrap-rtl.min.css?ver=1.0">
+  <!-- Font: IRANsans -->
+  <link rel="stylesheet" href="/assets/css/iransans.min.css?ver=1.0">
+  <!-- Loader -->
+  <link rel="stylesheet" href="/assets/css/loader.css?ver=1.0">
+  <!-- Style.css File -->
+  <link rel="stylesheet" href="/assets/css/style.css?ver=1.1">
+  
+  <link rel="icon" href="https://shayanfp.ir/assets/img/Shayan-Farhang-Pazhooh.jpg">
+
+  <meta name="theme-color" content="#1DE9B6" />
+</head>
+
+
+<body>
+
+  <div class="allcontentsh">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 style="font-size:28px; padding:20px;line-height:1.8;margin:50px 0;" class="d-block text-center">
+            دسترسی شما محدود است!! خطای 403
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- jQuery first, then Bootstrap JS -->
+  <script src="https://shayanweb.com/wp-content/themes/shayanweb/js/pace.min.js?ver=1.0"></script>
+
+</body>
+
+</html>

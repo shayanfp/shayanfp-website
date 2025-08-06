@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Logs
+logs
+.log
+npm-debug.log
+
+# Misc
+.idea
+.vscode
+.swo
+.swp
+
+# Ignore proprietary font files
+assets/css/iransans/

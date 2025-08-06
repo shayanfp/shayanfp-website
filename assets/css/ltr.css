@@ -1,0 +1,118 @@
+body {
+  direction: ltr;
+  text-align: left;
+  font-family: Roboto;
+}
+
+header .logoarea .titlearea {
+  padding-right: 0;
+  padding-left: 10px;
+}
+
+header .left-items li.socialicon a {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+header .left-items li {
+  float: right;
+}
+
+header .logoarea .titlearea span {
+  font-size: 12.2px;
+}
+
+main#main .my-name-is {
+  font-size: 35px;
+}
+
+main#main .i-am-who {
+  font-size: 21.8px
+}
+
+#main .paragraph {
+    line-height: 40px;
+}
+
+.toparea i.fa-language{
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+.langtitle{
+  margin-right: 8px;
+  margin-left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1199px) {
+  header .logoarea .imgarea img {
+    width: 80px;
+    height: 80px;
+  }
+  header .logoarea .titlearea h1 {
+    font-size: 15px;
+  }
+  header .logoarea .titlearea span {
+    font-size: 13px;
+  }
+  #skills .skill-boxes h3 {
+    font-size: 18px;
+  }
+  #skills .skill-boxes span {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {}
+
+@media (max-width: 991px) {
+  header .logoarea .titlearea h1 {
+    font-size: 20px;
+  }
+  header .logoarea .titlearea span {
+    font-size: 11px;
+  }
+  #skills .skill-boxes h3 {
+    font-size: 21px;
+  }
+  #skills .skill-boxes span {
+    font-size: 16px;
+  }
+  main#main .i-am-who {
+    font-size: 18.8px;
+  }
+  main#main .my-name-is {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 992px) {}
+
+@media (max-width: 767px) {
+}
+
+@media (min-width: 768px) {}
+
+@media (max-width: 575px) {
+  main#main .my-name-is {
+    font-size: 24px;
+  }
+  main#main .i-am-who {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 576px) {}

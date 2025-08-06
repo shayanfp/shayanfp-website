@@ -1,0 +1,87 @@
+<!Doctype html>
+
+<html lang="fa">
+
+<head>
+  <title>صفحه یافت نشد | شایان فرهنگ پژوه</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://shayanweb.com/wp-content/themes/shayanweb/css/bootstrap-rtl.min.css?ver=1.0">
+  <!-- Font: IRANsans -->
+  <link rel="stylesheet" href="/assets/css/iransans.min.css?ver=1.0">
+  <!-- Loader -->
+  <link rel="stylesheet" href="/assets/css/loader.css?ver=1.0">
+  <!-- Style.css File -->
+  <link rel="stylesheet" href="/assets/css/style.css?ver=1.1">
+  <!-- Responsive The website -->
+  <link rel="stylesheet" href="/assets/css/responsive.css?ver=1.0">
+  <link rel="icon" href="https://shayanfp.ir/assets/img/Shayan-Farhang-Pazhooh.jpg">
+  <meta name="theme-color" content="#1DE9B6" />
+
+  <style>
+    .page-404{text-align:center}
+    .page-404-bg{background:#f5f5f5;border-radius:10px;padding:40px 15px}
+    .page-404-container{width:550px;max-width:100%;margin:auto;padding:10px}
+    .page-404 h1{font-size:30px;line-height:1.8}
+    .page-404 p{line-height:2.3;margin:0}
+    @media (min-width: 576px){
+      .page-404-container{padding:15px}
+      .page-404-bg{padding:55px 50px}
+    }
+  </style>
+  
+</head>
+
+<body>
+
+  <div class="allcontentsh">
+    <main class="home-padding-top" id="main">
+      <div class="container">
+        <div class="page-404-container">
+          <div class="page-404-bg">
+            <div class="row page-404" style="display: flex; align-items: center;">
+              <div class="col-12">
+                <h1>خطای 404 - صفحه یافت نشد!</h1>
+                <p>
+                  سلام! سایت شخصی من همون یک صفحه‌ی اصلی هست که برای سبک بودنش کدنویسی‌اش کردم؛ دنبال چیز دیگه‌ای نگردید! (:<br>
+                  <a class="sh-btn d-block d-sm-inline-block" href="/">برگردید به صفحه‌ی اصلی</a> <span class="d-block d-sm-inline-block">تا بیشتر با من آشنا بشید😊💚</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="container">
+        <div style="padding:10px 0;">
+          <div class="row">
+            <div class="col-12">
+              <p class="paragraph">
+                تمامی حقوق برای
+                <a href="/">شایان فرهنگ پژوه</a>
+                محفوظ است.
+                |
+                طراحی شده در
+                <a rel="noopener noreferrer" href="https://shayanweb.com/?utm_source=shayanfpir&utm_medium=footerlink&utm_campaign=footerintro&utm_content=designedbyshweb">
+                  شایان وب
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- jQuery first, then Bootstrap JS -->
+  <script src="/assets/js/jquery-1.12.4.min.js"></script>
+  <script src="https://shayanweb.com/wp-content/themes/shayanweb/js/pace.min.js?ver=1.0"></script>
+
+</body>
+
+</html>
