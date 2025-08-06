@@ -1,4 +1,4 @@
-# Shayan Farhang Pazhooh - Personal Portfolio Website
+# Shayan Farhang Pazhooh - Personal Website
 
 This repository contains the source code for my personal website, which serves as my online resume, showcasing my story, skills, and projects.
 
