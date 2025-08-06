@@ -17,4 +17,4 @@ npm-debug.log
 .swp
 
 # Ignore proprietary font files
-assets/css/iransans/
+assets/fonts/iransans/
