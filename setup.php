@@ -5,9 +5,15 @@ if (!defined('ShayanFP_BEST')) {
     exit;
 }
 
-function turl(){
-    return 'https://shayanfp.ir/';
+function turl() {
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+    // domain name:
+    $host = $_SERVER['HTTP_HOST'];
+    $scriptName = $_SERVER['SCRIPT_NAME'];
+    $path = rtrim(dirname($scriptName), '/\\') . '/';
+    return $protocol . $host . $path;
 }
+
 
 function _e($a){
     echo $a;
@@ -39,7 +45,7 @@ $keywords='شایان فرهنگ پژوه'
     <link rel="stylesheet" href="<?php _e(turl()); ?>assets/css/iransans.min.css?ver=1.1">
   <?php } ?>
   <!-- FontAwesome -->
-  <link rel="stylesheet" href="<?php _e(turl()); ?>assets/css/all.min.css?ver=1.0">
+  <link rel="stylesheet" href="<?php _e(turl()); ?>assets/css/all.min.css?ver=7.0.0">
   <!-- Loader -->
   <link rel="stylesheet" href="<?php _e(turl()); ?>assets/css/loader.css?ver=1.0">
   <!-- Style.css File -->
@@ -97,7 +103,7 @@ function shayanfp_header($lang='fa'){
         <div class="row justify-content-between">
           <div class="col-md-4 col-md-6 col-12">
             <div class="float-md-<?php if($lang=='en'){echo 'left';}else{echo 'right';} ?> float-unset lang-headarea">
-                <i class="fas fa-language"></i>
+                <i class="fa-solid fa-globe"></i>
                 <span class="langtitle"><?php if($lang=='en'){echo 'Language: ';}else{echo 'زبان / Language: ';} ?></span>
                 <a class="langb" href="<?php _e(turl()); ?>"><?php if($lang=='en'){echo 'Persian';}else{echo 'فارسی';} ?></a>
                 <a class="langb" href="<?php _e(turl()); ?>en">English</a>
@@ -144,21 +150,20 @@ function shayanfp_header($lang='fa'){
               <div class="left-items">
                 <ul>
                   <li class="socialicon insta">
+                    <a title="linkedin" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/shayanfp/">
+                      <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                  <li class="socialicon insta">
                     <a title="instagram" rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/shayanfpinsta/">
-                      <i class="fab fa-instagram"></i>
+                      <i class="fa-brands fa-instagram"></i>
                     </a>
                   </li>
                   <li class="socialicon mail">
                     <a title="email" target="_blank" href="mailto:shayanfp@shayanweb.com">
-                      <i class="far fa-envelope"></i>
+                      <i class="fa-regular fa-envelope"></i>
                     </a>
                   </li>
-                  <!-- <li class="contactme">
-                    <a href="#contact">
-                      <i class="fas fa-phone"></i>
-                      <span>تماس با من</span>
-                    </a>
-                  </li> -->
                 </ul>
               </div>
             </div>
@@ -368,12 +373,12 @@ function shayanfp_home_main($lang='fa'){
 			<div class="publication-details">
 				<h3>An Efficient Continuous-Time MILP for Integrated Aircraft Hangar Scheduling and Layout</h3>
 				<div class="publication-meta">
-				<i class="fas fa-flask"></i>
+				<i class="fa-solid fa-flask"></i>
 				Paper submitted to: <strong>Computers & Operations Research</strong> (Q1 Journal)
 				</div>
 				<p class="publication-abstract">This preprint introduces a novel continuous-time MILP model that solves the complex aircraft hangar scheduling problem to optimality for up to 25 aircraft in seconds. By outperforming traditional heuristic methods, our approach provides a scalable decision-support framework with significant economic benefits for MRO operations.</p>
 				<a rel="noopener noreferrer" target="_blank" href="https://doi.org/10.48550/arXiv.2508.02640" class="sh-btn sh-btn-research">
-				<i class="fas fa-file-alt" style="margin-right: 8px;"></i>
+        <i class="fa-regular fa-file-lines" style="margin-right:8px"></i>
 				View Preprint on arXiv
 				</a>
 			</div>
@@ -483,26 +488,26 @@ function shayanfp_home_main($lang='fa'){
       </div>
       <div id="contact" class="bgf5 home-boxes">
         <div class="container">
-          <div class="row d-flex align-items-center">
+          <div class="row d-flex">
             <div class="col-12">
               <h2 class="text-center box-title">
                 Contact Me
               </h2>
             </div>
-            <div class="col-sm-6 col-12">
-              <div class="shayanfp-contact-box">
+            <div class="col-sm-6 col-12 mb-3 mb-sm-0">
+              <div class="shayanfp-contact-box h-100 d-flex flex-column justify-content-center">
                 <h3 class="contact-list-title">Get in touch with me</h3>
                 <ul class="ul-clear contact-list">
                   <li>
                     <a rel="noopener noreferrer" class="d-block" target="_blank" href="mailto:shayanfp@shayanweb.com">
-                      <i class="far fa-envelope"></i>
+                      <i class="fa-regular fa-envelope"></i>
                       My email:
                       <span class="d-block d-lg-inline-block">shayanfp@shayanweb.com</span>
                     </a>
                   </li>
                   <li>
                     <a rel="noopener noreferrer" class="d-block" target="_blank" href="https://shayanweb.com/contact/">
-                      <i class="far fa-list-alt"></i>
+                      <i class="fa-regular fa-rectangle-list"></i>
                       Contact us in ShayanWeb:
                       <span class="d-block d-lg-inline-block">shayanweb.com/contact</span>
                     </a>
@@ -510,22 +515,36 @@ function shayanfp_home_main($lang='fa'){
                 </ul>
               </div>
             </div>
-            <div class="col-sm-6 col-12">
-              <div class="shayanfp-contact-box">
+            <div class="col-sm-6 col-12 mb-3 mb-sm-0">
+              <div class="shayanfp-contact-box h-100 d-flex flex-column justify-content-center">
                 <h3 class="contact-list-title">Social Networks</h3>
                 <ul class="ul-clear contact-list">
                   <li>
                     <a rel="noopener noreferrer" class="d-block" target="_blank" href="https://www.instagram.com/shayanfpinsta/">
-                      <i class="fab fa-instagram"></i>
-                      My Instagram page:
+                      <i class="fa-brands fa-instagram"></i>
+                      My Instagram Page:
                       <span class="d-block d-lg-inline-block">instagram.com/shayanfpinsta</span>
                     </a>
                   </li>
                   <li>
-                    <a rel="noopener noreferrer" class="d-block" target="_blank" href="https://virgool.io/@shayanfpblog/">
-                      <i class="fas fa-feather"></i>
-                      My Virgool blog:
-                      <span class="d-block d-lg-inline-block">virgool.io/@shayanfpblog</span>
+                    <a rel="noopener noreferrer" class="d-block" target="_blank" href="https://www.linkedin.com/in/shayanfp/">
+                      <i class="fa-brands fa-linkedin-in"></i>
+                      My LinkedIn Profile:
+                      <span class="d-block d-lg-inline-block">linkedin.com/in/shayanfp</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="noopener noreferrer" class="d-block" target="_blank" href="https://www.researchgate.net/profile/Shayan-Farhang-Pazhooh">
+                      <i class="fa-brands fa-researchgate"></i>
+                      My ResearchGate Profile:
+                      <span class="d-block d-lg-inline-block">Shayan-Farhang-Pazhooh</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="noopener noreferrer" class="d-block" target="_blank" href="https://orcid.org/0009-0001-1366-7942">
+                      <i class="fa-brands fa-orcid"></i>
+                      My ORCID:
+                      <span class="d-block d-lg-inline-block">0009-0001-1366-7942</span>
                     </a>
                   </li>
                 </ul>
@@ -676,12 +695,12 @@ function shayanfp_home_main($lang='fa'){
 			<div class="publication-details">
 				<h3>An Efficient Continuous-Time MILP for Integrated Aircraft Hangar Scheduling and Layout</h3>
 				<div class="publication-meta">
-				<i class="fas fa-flask"></i>
+				<i class="fa-solid fa-flask"></i>
 				مقاله ارسال شده به ژورنال: <strong>Computers & Operations Research</strong> (Q1)
 				</div>
 				<p class="publication-abstract">This preprint introduces a novel continuous-time MILP model that solves the complex aircraft hangar scheduling problem to optimality for up to 25 aircraft in seconds. By outperforming traditional heuristic methods, our approach provides a scalable decision-support framework with significant economic benefits for MRO operations.</p>
 				<a rel="noopener noreferrer" target="_blank" href="https://doi.org/10.48550/arXiv.2508.02640" class="sh-btn sh-btn-research">
-				<i class="fas fa-file-alt" style="margin-left: 8px;"></i>
+				<i class="fa-regular fa-file-lines" style="margin-left:8px"></i>
 				مشاهده‌ی Preprint مقاله در arXiv
 				</a>
 			</div>
@@ -791,26 +810,26 @@ function shayanfp_home_main($lang='fa'){
       </div>
       <div id="contact" class="bgf5 home-boxes">
         <div class="container">
-          <div class="row d-flex align-items-center">
+          <div class="row d-flex">
             <div class="col-12">
               <h2 class="text-center box-title">
                 تماس با من
               </h2>
             </div>
-            <div class="col-sm-6 col-12">
-              <div class="shayanfp-contact-box">
+            <div class="col-sm-6 col-12 mb-3 mb-sm-0">
+              <div class="shayanfp-contact-box h-100 d-flex flex-column justify-content-center">
                 <h3 class="contact-list-title">اطلاعات تماس</h3>
                 <ul class="ul-clear contact-list">
                   <li>
                     <a class="d-block" target="_blank" href="mailto:shayanfp@shayanweb.com">
-                      <i class="far fa-envelope"></i>
+                      <i class="fa-regular fa-envelope"></i>
                       ایمیل من:
                       <span class="d-block d-lg-inline-block">shayanfp@shayanweb.com</span>
                     </a>
                   </li>
                   <li>
                     <a rel="noopener noreferrer" class="d-block" target="_blank" href="https://shayanweb.com/contact/">
-                      <i class="far fa-list-alt"></i>
+                      <i class="fa-regular fa-rectangle-list"></i>
                       فرم ارتباط با ما در شایان وب:
                       <span class="d-block d-lg-inline-block">shayanweb.com/contact</span>
                     </a>
@@ -818,22 +837,36 @@ function shayanfp_home_main($lang='fa'){
                 </ul>
               </div>
             </div>
-            <div class="col-sm-6 col-12">
-              <div class="shayanfp-contact-box">
+            <div class="col-sm-6 col-12 mb-3 mb-sm-0">
+              <div class="shayanfp-contact-box h-100 d-flex flex-column justify-content-center">
                 <h3 class="contact-list-title">شبکه‌های اجتماعی</h3>
                 <ul class="ul-clear contact-list">
                   <li>
                     <a rel="noopener noreferrer" class="d-block" target="_blank" href="https://www.instagram.com/shayanfpinsta/">
-                      <i class="fab fa-instagram"></i>
+                      <i class="fa-brands fa-instagram"></i>
                       اینستاگرام من:
                       <span class="d-block d-lg-inline-block">instagram.com/shayanfpinsta</span>
                     </a>
                   </li>
                   <li>
-                    <a rel="noopener noreferrer" class="d-block" target="_blank" href="https://virgool.io/@shayanfpblog/">
-                      <i class="fas fa-feather"></i>
-                      بلاگ من در ویرگول:
-                      <span class="d-block d-lg-inline-block">virgool.io/@shayanfpblog</span>
+                    <a rel="noopener noreferrer" class="d-block" target="_blank" href="https://www.linkedin.com/in/shayanfp/">
+                      <i class="fa-brands fa-linkedin-in"></i>
+                      لینکدین من:
+                      <span class="d-block d-lg-inline-block">linkedin.com/in/shayanfp</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="noopener noreferrer" class="d-block" target="_blank" href="https://www.researchgate.net/profile/Shayan-Farhang-Pazhooh">
+                      <i class="fa-brands fa-researchgate"></i>
+                      ریسرچ‌گیت من:
+                      <span class="d-block d-lg-inline-block">Shayan-Farhang-Pazhooh</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="noopener noreferrer" class="d-block" target="_blank" href="https://orcid.org/0009-0001-1366-7942">
+                      <i class="fa-brands fa-orcid"></i>
+                      ارکید من:
+                      <span class="d-block d-lg-inline-block">0009-0001-1366-7942</span>
                     </a>
                   </li>
                 </ul>
@@ -871,10 +904,10 @@ function shayanfp_404(){
   <!-- Loader -->
   <link rel="stylesheet" href="<?php _e(turl()); ?>assets/css/loader.css?ver=1.0">
   <!-- Style.css File -->
-  <link rel="stylesheet" href="<?php _e(turl()); ?>assets/css/style.css?ver=1.2.5">
+  <link rel="stylesheet" href="<?php _e(turl()); ?>assets/css/style.css?ver=1.2.6">
   <!-- Responsive The website -->
-  <link rel="stylesheet" href="<?php _e(turl()); ?>assets/css/responsive.css?ver=1.1.2">
-  <link rel="icon" href="https://shayanfp.ir/assets/img/Shayan-Farhang-Pazhooh.jpg">
+  <link rel="stylesheet" href="<?php _e(turl()); ?>assets/css/responsive.css?ver=1.1.3">
+  <link rel="icon" href="<?php _e(turl()); ?>assets/img/Shayan-Farhang-Pazhooh.jpg">
   <meta name="theme-color" content="#1DE9B6" />
 
   <style>

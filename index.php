@@ -2,8 +2,13 @@
 // load shayanfp.ir platform
 define("ShayanFP_BEST", 1); include 'setup.php';
 
-$path = $_SERVER['REQUEST_URI'];
-
+// $path = $_SERVER['REQUEST_URI'];
+$base_directory = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
+$request_uri = strtok($_SERVER['REQUEST_URI'], '?');
+$path = substr($request_uri, strlen($base_directory));
+if (empty($path) || $path === '/index.php') {
+    $path = '/';
+}
 if (strpos($path, "?") !== false) {
     $path = strstr($path, "?", true);
 } else {
