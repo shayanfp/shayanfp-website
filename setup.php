@@ -149,7 +149,7 @@ function shayanfp_header($lang='fa'){
             <div class="col-2 d-none d-md-block">
               <div class="left-items">
                 <ul>
-                  <li class="socialicon insta">
+                  <li class="socialicon mail">
                     <a title="linkedin" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/shayanfp/">
                       <i class="fa-brands fa-linkedin-in"></i>
                     </a>
