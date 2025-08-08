@@ -187,7 +187,10 @@ function shayanfp_footer($lang='fa'){
               <p class="paragraph">
                 <?php if($lang=='en'){ ?>
                 All rights reserved by 
-                <a href="<?php _e(turl()); ?>en">Shayan Farhang Pazhooh</a>.
+                <a href="<?php _e(turl()); ?>en">Shayan Farhang Pazhooh</a>. | Website at
+                <a rel="noopener noreferrer" href="https://github.com/shayanfp/shayanfp-website">
+                  GitHub
+                </a>
                 <?php }else{ ?>
                 تمامی حقوق برای
                 <a href="<?php _e(turl()); ?>">شایان فرهنگ پژوه</a>
@@ -196,6 +199,9 @@ function shayanfp_footer($lang='fa'){
                 طراحی شده در
                 <a rel="noopener noreferrer" href="https://shayanweb.com/?utm_source=shayanfpir&utm_medium=footerlink&utm_campaign=footerintro&utm_content=designedbyshweb">
                   شایان وب
+                </a> | سایت در
+                <a rel="noopener noreferrer" href="https://github.com/shayanfp/shayanfp-website">
+                  گیت‌هاب
                 </a>
                 <?php } ?>
               </p>
@@ -534,6 +540,13 @@ function shayanfp_home_main($lang='fa'){
                     </a>
                   </li>
                   <li>
+                    <a rel="noopener noreferrer" class="d-block" target="_blank" href="https://github.com/shayanfp">
+                      <i class="fa-brands fa-github"></i>
+                      My GitHub:
+                      <span class="d-block d-lg-inline-block">github.com/shayanfp</span>
+                    </a>
+                  </li>
+                  <li>
                     <a rel="noopener noreferrer" class="d-block" target="_blank" href="https://www.researchgate.net/profile/Shayan-Farhang-Pazhooh">
                       <i class="fa-brands fa-researchgate"></i>
                       My ResearchGate Profile:
@@ -856,6 +869,13 @@ function shayanfp_home_main($lang='fa'){
                     </a>
                   </li>
                   <li>
+                    <a rel="noopener noreferrer" class="d-block" target="_blank" href="https://github.com/shayanfp">
+                      <i class="fa-brands fa-github"></i>
+                      گیت‌هاب من:
+                      <span class="d-block d-lg-inline-block">github.com/shayanfp</span>
+                    </a>
+                  </li>
+                  <li>
                     <a rel="noopener noreferrer" class="d-block" target="_blank" href="https://www.researchgate.net/profile/Shayan-Farhang-Pazhooh">
                       <i class="fa-brands fa-researchgate"></i>
                       ریسرچ‌گیت من:
@@ -957,6 +977,9 @@ function shayanfp_404(){
                 طراحی شده در
                 <a rel="noopener noreferrer" href="https://shayanweb.com/?utm_source=shayanfpir&utm_medium=footerlink&utm_campaign=footerintro&utm_content=designedbyshweb">
                   شایان وب
+                </a> | سایت در
+                <a rel="noopener noreferrer" href="https://github.com/shayanfp/shayanfp-website">
+                  گیت‌هاب
                 </a>
               </p>
             </div>
